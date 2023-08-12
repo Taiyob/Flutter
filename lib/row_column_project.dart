@@ -37,7 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
         appBar: AppBar(
           //title: Text(widget.title),
-          title: Text('Flutter Container'),
+          title: Text('Flutter Container', style: TextStyle(fontSize: 25, fontFamily:'FontMain', fontWeight: FontWeight.w500)),
         ),
         body:Container(
           height: 400,
@@ -65,20 +65,20 @@ class _MyHomePageState extends State<MyHomePage> {
                         onPressed: (){}, child: Text('Click Me'),)
                     ],
                   ),
-                  Text('Aa', style: TextStyle(fontSize: 25),),
-                  Text('Bb', style: TextStyle(fontSize: 25),),
-                  Text('Cc', style: TextStyle(fontSize: 25),),
-                  Text('Dd', style: TextStyle(fontSize: 25),),
+                  Text('Aa', style: TextStyle(fontSize: 25, fontFamily:'FontMain', fontWeight: FontWeight.w500),),
+                  Text('Bb', style: TextStyle(fontSize: 25, fontFamily:'FontMain', fontWeight: FontWeight.w500),),
+                  Text('Cc', style: TextStyle(fontSize: 25, fontFamily:'FontMain', fontWeight: FontWeight.w500),),
+                  Text('Dd', style: TextStyle(fontSize: 25, fontFamily:'FontMain', fontWeight: FontWeight.w500),),
                 ],
               ),
-              Text('A', style: TextStyle(fontSize: 25),),
-              Text('B', style: TextStyle(fontSize: 25),),
-              Text('C', style: TextStyle(fontSize: 25),),
-              Text('D', style: TextStyle(fontSize: 25),),
-              Text('E', style: TextStyle(fontSize: 25),),
+              Text('A', style: TextStyle(fontSize: 25, fontFamily:'FontMain', fontWeight: FontWeight.w500),),
+              Text('B', style: TextStyle(fontSize: 25, fontFamily:'FontMain', fontWeight: FontWeight.w500),),
+              Text('C', style: TextStyle(fontSize: 25, fontFamily:'FontMain', fontWeight: FontWeight.w500),),
+              Text('D', style: TextStyle(fontSize: 25, fontFamily:'FontMain', fontWeight: FontWeight.w500),),
+              Text('E', style: TextStyle(fontSize: 25, fontFamily:'FontMain', fontWeight: FontWeight.w500),),
               ElevatedButton(onPressed: (){
 
-              },  child: Text('Click'))
+              },  child: Text('Click', style: TextStyle(fontSize: 25, fontFamily:'FontMain', fontWeight: FontWeight.w500),))
             ],
           ),
 
