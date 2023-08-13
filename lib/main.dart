@@ -58,14 +58,8 @@ class _MyHomePageState extends State<MyHomePage> {
           width: 250,
           color: Colors.orangeAccent,
           child: const Center(
-                    child: Text('Hello Flutter',textAlign: TextAlign.center ,style: TextStyle(
-                    fontSize: 25,
-                    color: Colors.white,
-                      fontWeight: FontWeight.w900,
-                      backgroundColor: Colors.lime,
-      )
-      )),
-        ),
+                    child: Text('Hello Flutter',textAlign: TextAlign.center ,style: TextStyle(fontSize: 25, color: Colors.white,fontWeight: FontWeight.w900, backgroundColor: Colors.lime,))),),
+
       )
       // Center(
       //   child: Column(
