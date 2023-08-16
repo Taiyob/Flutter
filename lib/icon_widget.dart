@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 void main(){
   runApp(PracticeApps());
@@ -34,11 +35,22 @@ class IconWidgetsState extends State<IconWidgets>{
       appBar: AppBar(
         title: Text('Icon Widget'),
       ),
-      body: Center(child: Icon(
-        Icons.add_business_rounded,
-        size: 50,
-        color: Colors.deepPurple,
-      )),
+      body: Center(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(
+                  Icons.add_business_rounded,
+                  size: 50,
+                  color: Colors.deepPurple,
+                ),
+              SizedBox(width: 11,),
+              FaIcon(FontAwesomeIcons.amazon,
+                color: Colors.purpleAccent,
+                size: 50,
+              ),
+            ],
+          )),
     );
   }
 
