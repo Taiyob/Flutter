@@ -7,15 +7,14 @@ class RoundedButton extends StatelessWidget{
   final Color? bgColor;
   final TextStyle? textStyle;
   final VoidCallback? callback;
-
-
-  RoundedButton({
-    required this.btnName,
-    this.icon,
-    this.bgColor = Colors.blue,
-    this.textStyle,
-    this.callback
-  }
+  RoundedButton(
+    {
+      required this.btnName,
+      this.icon,
+      this.bgColor = Colors.blue,
+      this.textStyle,
+      this.callback
+    }
   );
   @override
   Widget build(BuildContext context) {

@@ -34,7 +34,7 @@ class CustomNewWidgetState extends State<CustomNewWidget>{
   Widget build(BuildContext context) {
     return Scaffold(
           appBar: AppBar(
-            title: Text('Title'),
+            title: Text('Custom New Widget'),
           ),
       body: Center(
         child: Column(
@@ -43,10 +43,11 @@ class CustomNewWidgetState extends State<CustomNewWidget>{
             Container(
               width: 150,
               height: 50,
-              child: RoundedButton(btnName: 'Play', icon: Icon(Icons.play_arrow),
+              child: RoundedButton(
+                btnName: 'Play', icon: Icon(Icons.play_arrow),
                 callback: (){
                 print('Login');
-              },
+                },
                 textStyle: mTextstyle21(),
               ),
             ),
@@ -56,7 +57,8 @@ class CustomNewWidgetState extends State<CustomNewWidget>{
             Container(
               width: 150,
               height: 50,
-              child: RoundedButton(btnName: 'Press',
+              child: RoundedButton(
+                btnName: 'Press',
                 callback: (){
                   print('Login');
                 },
