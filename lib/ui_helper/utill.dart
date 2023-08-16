@@ -16,5 +16,7 @@ TextStyle mTextstyle21({Color textColor= Colors.black, FontWeight fontWeight= Fo
 TextStyle mTextstyle16(){
   return TextStyle(
     fontSize: 16,
+    fontWeight: FontWeight.bold,
+    color: Colors.white,
   );
 }
