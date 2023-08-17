@@ -20,3 +20,10 @@ TextStyle mTextstyle16(){
     color: Colors.white,
   );
 }
+TextStyle whiteColor(){
+  return TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.bold,
+    color: Colors.white,
+  );
+}

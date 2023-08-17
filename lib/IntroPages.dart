@@ -16,7 +16,7 @@ class IntroPage extends StatelessWidget{
           //crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text('If you click, I will go another page.', style: mTextstyle21(),),
-            SizedBox(
+            const SizedBox(
               height: 11,
             ),
             ElevatedButton(
