@@ -17,7 +17,7 @@ class MagicAppThreeD extends StatelessWidget{
   }
 
 }
-
+//3D animation ..................
 class ListWheelScrollViwes extends StatefulWidget{
   @override
   State<StatefulWidget> createState() => ListWheelScrollViweState();
