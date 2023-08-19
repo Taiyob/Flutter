@@ -22,7 +22,6 @@ class MyFullApps extends StatelessWidget{
 class BMIAPPS extends StatefulWidget{
   @override
   State<StatefulWidget> createState() => BMIAPPSTATES();
-
 }
 
 class BMIAPPSTATES extends State<BMIAPPS>{
