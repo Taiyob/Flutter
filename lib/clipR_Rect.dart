@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 
 void main(){
   runApp(SampleShortApp());
@@ -26,12 +27,13 @@ class ClipRRectWidget extends StatelessWidget{
       ),
       body: Center(
         child: ClipRect(
-            borderRadius: BorderRadius.circular(21),
-            child: Container(
-              color: Colors.lime,
-              height: 200,
-              width: 200,
-            ),
+            //borderRadius: BorderRadius.circular(21),       // ........... problem line
+            child: Image.asset('assets/images/only.jpg',width: 400,height: 200,fit: BoxFit.fill,),
+            // Container(
+            //   color: Colors.lime,
+            //   height: 200,
+            //   width: 200,
+            // ),
         ),
       ),
     );
