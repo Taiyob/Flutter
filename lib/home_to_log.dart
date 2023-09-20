@@ -33,7 +33,7 @@ class SplashPagesState extends State<SplashPages> {
     super.initState();
     Timer(Duration(seconds: 2),(){
       Navigator.pushReplacement(context,
-          MaterialPageRoute(builder:(context) => LoginPage(), ));
+          MaterialPageRoute(builder:(context) => LoginPage(),));
     },);
   }
 

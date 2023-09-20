@@ -1,6 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_basics/ui_helper/utill.dart';
+void main(){
+  runApp(DataGetMethod('siam'));
+}
 
 class DataGetMethod extends StatelessWidget{
   var nameFromHome;
