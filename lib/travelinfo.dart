@@ -21,8 +21,19 @@ class _TravelInfoState extends State<TravelInfo> {
           children: [
              ClipRRect(
                borderRadius: BorderRadius.circular(20.0),
-               child: Image.asset(travel.img),
-             )
+               child: Padding(
+                 padding: const EdgeInsets.only(right: 10.0),
+                 child: Image.asset(travel.img,width: MediaQuery.of(context).size.width,fit: BoxFit.cover,),
+               ),
+             ),
+            Positioned(
+                bottom: 200,
+                left: 20.0,
+                child: Column(
+                  children: [
+                    Text(travel.name,style: TextStyle(fontSize: 20,color: Colors.pink),),
+                    Text(travel.location,style: TextStyle(fontSize: 20,color: Colors.blue),),
+                  ],)),
           ],
         );
       }),

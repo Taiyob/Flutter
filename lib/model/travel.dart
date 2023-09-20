@@ -7,10 +7,10 @@ class Travel{
   
   static List<Travel> travelInfo(){
     return [
-      Travel('Product Name', 'Dhaka-Cantonment', 'assets/images/register.png') ,
-      Travel('Product Name', 'Dhaka-Cantonment', 'assets/images/register.png') ,
-      Travel('Product Name', 'Dhaka-Cantonment', 'assets/images/register.png') ,
-      Travel('Product Name', 'Dhaka-Cantonment', 'assets/images/register.png') ,
+      Travel('Product Name', 'Dhaka-Cantonment', 'assets/images/170224172523-mojito.jpg') ,
+      Travel('Product Name', 'Dhaka-Cantonment', 'assets/images/170224172523-mojito.jpg') ,
+      Travel('Product Name', 'Dhaka-Cantonment', 'assets/images/170224172523-mojito.jpg') ,
+      Travel('Product Name', 'Dhaka-Cantonment', 'assets/images/170224172523-mojito.jpg') ,
     ];
   }
 }
