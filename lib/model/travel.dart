@@ -13,4 +13,12 @@ class Travel{
       Travel('Product Name', 'Dhaka-Cantonment', 'assets/images/170224172523-mojito.jpg') ,
     ];
   }
+  static List<Travel> mostPopularTravel(){
+    return [
+      Travel('Product Name', 'Dhaka-Cantonment', 'assets/images/170224172523-mojito.jpg') ,
+      Travel('Product Name', 'Dhaka-Cantonment', 'assets/images/170224172523-mojito.jpg') ,
+      Travel('Product Name', 'Dhaka-Cantonment', 'assets/images/170224172523-mojito.jpg') ,
+      Travel('Product Name', 'Dhaka-Cantonment', 'assets/images/170224172523-mojito.jpg') ,
+    ];
+  }
 }

@@ -23,17 +23,35 @@ class _TravelInfoState extends State<TravelInfo> {
                borderRadius: BorderRadius.circular(20.0),
                child: Padding(
                  padding: const EdgeInsets.only(right: 10.0),
-                 child: Image.asset(travel.img,width: MediaQuery.of(context).size.width,fit: BoxFit.cover,),
+                 child: Image.asset(travel.img,height: MediaQuery.of(context).size.height,width: MediaQuery.of(context).size.width,fit: BoxFit.cover,),
                ),
              ),
             Positioned(
                 bottom: 200,
                 left: 20.0,
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(travel.name,style: TextStyle(fontSize: 20,color: Colors.pink),),
                     Text(travel.location,style: TextStyle(fontSize: 20,color: Colors.blue),),
-                  ],)),
+                  ],
+                )
+            ),
+            Positioned(
+              //left: 280,
+              //top: 210,
+              right: 10,
+                bottom:-10,
+                child: Container(
+                  height: 40,
+                  width: 40,
+                  child: Icon(Icons.arrow_forward_outlined,size: 35,),
+                  decoration: BoxDecoration(
+                      color: Colors.orange,
+                      borderRadius: BorderRadius.circular(50),
+                  ),
+                )
+            ),
           ],
         );
       }),

@@ -7,7 +7,7 @@ import 'package:flutter_basics/designPage.dart';
 
 
 void main(){
-  runApp(MaterialApp(home: ShopUI(),));
+  runApp(const MaterialApp(home: ShopUI(),));
 }
 
 class ShopUI extends StatefulWidget {
@@ -21,10 +21,10 @@ class _ShopUIState extends State<ShopUI> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(Duration(seconds: 4),
+    Future.delayed(const Duration(seconds: 4),
             ()=>Navigator.push(
             context, MaterialPageRoute(builder: (context)=>const DesignPage(),
-            settings: RouteSettings(name: 'DesignPage'),
+            settings: const RouteSettings(name: 'DesignPage'),
             fullscreenDialog: false
         )));
   }

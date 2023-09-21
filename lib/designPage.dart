@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_basics/travelinfo.dart';
+import 'package:flutter_basics/widgets/most_popular.dart';
 
 class DesignPage extends StatefulWidget {
   const DesignPage({Key? key}) : super(key: key);
@@ -34,7 +35,7 @@ class _DesignPageState extends State<DesignPage> {
               Text('View All'),
             ],
           ),
-          Expanded(flex:1,child: Placeholder()),
+          Expanded(flex:1,child: MostPopularTravel()),
         ],
       )
     );
