@@ -28,12 +28,15 @@ class _DesignPageState extends State<DesignPage> {
         children: [
           Text('Travel Blog',style: TextStyle(fontSize: 36.0),),
           Expanded(flex:2,child: TravelInfo()),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text('Most Popular'),
-              Text('View All'),
-            ],
+          Padding(
+            padding: EdgeInsets.all(20.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text('Most Popular'),
+                Text('View All'),
+              ],
+            ),
           ),
           Expanded(flex:1,child: MostPopularTravel()),
         ],

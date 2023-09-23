@@ -19,9 +19,10 @@ class _TravelInfoState extends State<TravelInfo> {
         var travel = travel_list[index];
         return Stack(
           children: [
-             ClipRRect(
-               borderRadius: BorderRadius.circular(20.0),
+          ClipRRect(
+          borderRadius: BorderRadius.circular(20.0),
                child: Padding(
+                 //child: Expanded(child: Container(child: Image.asset(travel.img)),),
                  padding: const EdgeInsets.only(right: 10.0),
                  child: Image.asset(travel.img,height: MediaQuery.of(context).size.height,width: MediaQuery.of(context).size.width,fit: BoxFit.cover,),
                ),
@@ -42,13 +43,16 @@ class _TravelInfoState extends State<TravelInfo> {
               //top: 210,
               right: 10,
                 bottom:-10,
-                child: Container(
-                  height: 40,
-                  width: 40,
-                  child: Icon(Icons.arrow_forward_outlined,size: 35,),
-                  decoration: BoxDecoration(
-                      color: Colors.orange,
-                      borderRadius: BorderRadius.circular(50),
+                child: Padding(
+                  padding: const EdgeInsets.all(18.0),
+                  child: Container(
+                    height: 40,
+                    width: 40,
+                    child: Icon(Icons.arrow_forward_outlined,size: 35,),
+                    decoration: BoxDecoration(
+                        color: Colors.orange,
+                        borderRadius: BorderRadius.circular(50),
+                    ),
                   ),
                 )
             ),
