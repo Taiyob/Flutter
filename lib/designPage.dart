@@ -23,12 +23,12 @@ class _DesignPageState extends State<DesignPage> {
           ),
         ],
       ),
-      body: const Column(
+      body:  Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('Travel Blog',style: TextStyle(fontSize: 36.0),),
-          Expanded(flex:2,child: TravelInfo()),
-          Padding(
+          const Text('Travel Blog',style: TextStyle(fontSize: 36.0),),
+          const Expanded(flex:2,child: TravelInfo()),
+          const Padding(
             padding: EdgeInsets.all(20.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -38,7 +38,23 @@ class _DesignPageState extends State<DesignPage> {
               ],
             ),
           ),
-          Expanded(flex:1,child: MostPopularTravel()),
+          const Expanded(flex:1,child: MostPopularTravel()),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  decoration: const BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(100.0)),
+                    color: Colors.grey,
+                  ),
+                  height: 8,
+                  width: 150,
+                ),
+              ],
+            ),
+          ),
         ],
       )
     );
