@@ -28,7 +28,15 @@ class ScreenWidget extends StatelessWidget{
         appBar: AppBar(
           title: Text('Page Changing One To Another'),
         ),
-        body: Text('Someone clicked Intro Page.', style: mTextstyle21(),),
+        body: Center(
+                //child: Text('Someone clicked Intro Page.', style: mTextstyle21(),),
+              child: TextButton(
+                onPressed: (){
+                  Navigator.pop(context);
+                },
+                child: Text('Link'),
+              ),
+        ),
       );
   }
 
