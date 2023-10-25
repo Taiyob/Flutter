@@ -15,7 +15,7 @@ class _ScreenThreeState extends State<ScreenThree> {
     print('counter: ${count++}');
     return Scaffold(
       appBar: AppBar(
-        title: Text('Route(screen-three)'),
+        title: Text('Route(screen-three)',style: TextStyle(fontFamily: 'Pacifico'),),
       ),
       body: Container(
         color: Colors.purple,
@@ -29,7 +29,7 @@ class _ScreenThreeState extends State<ScreenThree> {
                  itemBuilder: (context,index){
                  return ListTile(
                    leading: Icon(Icons.account_circle),
-                   title: Text('From screen three',style: TextStyle(color: Colors.deepOrange),),
+                   title: Text('From screen three',style: TextStyle(color: Colors.deepOrange,fontFamily: 'Pacifico'),),
                    onTap: (){},
                  );
               }),

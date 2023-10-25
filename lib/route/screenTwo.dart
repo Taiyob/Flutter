@@ -15,7 +15,7 @@ class _ScreenTwoState extends State<ScreenTwo> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Route System(screen-two)'),
+        title: Text('Route System(screen-two)',style: TextStyle(fontFamily: 'Pacifico'),),
         backgroundColor: Color(0xff764abc),
       ),
       body: Center(
@@ -26,7 +26,7 @@ class _ScreenTwoState extends State<ScreenTwo> {
             TextButton(onPressed: (){
                 Navigator.pushNamed(context, ScreenThree.id);
                 //Navigator.push(context, MaterialPageRoute(builder: (context)=>ScreenOne()));
-              }, child: Text('go-screen-three')),
+              }, child: Text('go-screen-three',style: TextStyle(fontFamily: 'Pacifico'),)),
           ],
         ),
       ),

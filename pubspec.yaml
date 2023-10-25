@@ -79,10 +79,12 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
+    - family: TiltPrism
+      fonts:
+        - asset: assets/fonts/TiltPrism-Regular-VariableFont_XROT,YROT.ttf
     - family: Pacifico
       fonts:
-  #      - asset: assets/fonts/TiltPrism-Regular-VariableFont_XROT,YROT.ttf
-         - asset: assets/fonts/Pacifico-Regular.ttf
+        - asset: assets/fonts/Pacifico-Regular.ttf      
   #         style: italic
   #   - family: Trajan Pro
   #     fonts:
