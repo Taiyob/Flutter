@@ -15,18 +15,26 @@ class _ScreenTwoState extends State<ScreenTwo> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Route System(screen-two)',style: TextStyle(fontFamily: 'Pacifico'),),
-        backgroundColor: Color(0xff764abc),
+        title: const Text(
+          'Route System(screen-two)',
+          style: TextStyle(fontFamily: 'Pacifico'),
+        ),
+        backgroundColor: const Color(0xff764abc),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            TextButton(onPressed: (){
-                Navigator.pushNamed(context, ScreenThree.id);
-                //Navigator.push(context, MaterialPageRoute(builder: (context)=>ScreenOne()));
-              }, child: Text('go-screen-three',style: TextStyle(fontFamily: 'Pacifico'),)),
+            TextButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, ScreenThree.id);
+                  //Navigator.push(context, MaterialPageRoute(builder: (context)=>ScreenOne()));
+                },
+                child: const Text(
+                  'go-screen-three',
+                  style: TextStyle(fontFamily: 'Pacifico'),
+                )),
           ],
         ),
       ),

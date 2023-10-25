@@ -6,7 +6,7 @@ import 'package:flutter_basics/route/screenTwo.dart';
 
 void main(){
   print('main');
-  runApp(ScreenApp());
+  runApp(const ScreenApp());
 }
 
 class ScreenApp extends StatelessWidget {
@@ -21,9 +21,9 @@ class ScreenApp extends StatelessWidget {
       ),
       initialRoute: ScreenOne.id,
       routes: {
-        ScreenOne.id:(context)=>ScreenOne(),
-        ScreenTwo.id:(context)=>ScreenTwo(),
-        ScreenThree.id:(context)=>ScreenThree(),
+        ScreenOne.id:(context)=>const ScreenOne(),
+        ScreenTwo.id:(context)=>const ScreenTwo(),
+        ScreenThree.id:(context)=>const ScreenThree(),
       },
     );
   }

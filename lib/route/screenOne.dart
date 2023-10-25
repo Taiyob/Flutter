@@ -16,7 +16,7 @@ class _ScreenOneState extends State<ScreenOne> {
     print('counter: ${count++}');
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           'Route System(screen-one)',
           style: TextStyle(fontFamily: 'Pacifico'),
         ),
