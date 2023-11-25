@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(UserSignUpForm());
+  runApp(const UserSignUpForm());
 }
 
 class UserSignUpForm extends StatelessWidget {
@@ -190,6 +190,27 @@ class UserSignUpForm extends StatelessWidget {
                                 color: Colors.white)),
                       ),
                     ),
+                    const Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.symmetric(vertical: 10),
+                          child: Text('Already have an account?',
+                              style: TextStyle(
+                                  fontSize: 14.0,
+                                  fontWeight: FontWeight.w600,
+                                  color: Colors.black87)),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.symmetric(vertical: 10),
+                          child: Text('Log In',
+                              style: TextStyle(
+                                  fontSize: 14.0,
+                                  fontWeight: FontWeight.w600,
+                                  color: Colors.deepOrange)),
+                        ),
+                      ],
+                    )
                   ],
                 ),
               ],
