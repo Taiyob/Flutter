@@ -36,7 +36,7 @@ class RichTextState extends State<RichTexts>{
       ),
      body: Center(
        child: RichText(
-         text: TextSpan(
+         text: const TextSpan(
            style: TextStyle(
              color: Colors.grey,
              fontSize: 21,

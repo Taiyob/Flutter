@@ -39,11 +39,13 @@ class StackWidgetState extends State<StackWidget>{
         height: 300,
         width: 300,
         child: Stack(
+          //alignment: Alignment.topRight,
           children: [
             Container(
               width: 200,
               height: 200,
               color: Colors.red,
+              //child: Text('c1-text'),
             ),
             Positioned(
               left: 21,
@@ -52,8 +54,10 @@ class StackWidgetState extends State<StackWidget>{
                 width: 200,
                 height: 200,
                 color: Colors.lightGreen,
+                //child: Text('c2-text'),
               ),
             ),
+            //Text('test'),
           ],
         ),
       ),
