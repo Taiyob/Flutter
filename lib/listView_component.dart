@@ -34,60 +34,86 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    var arrNames=['Taiyob','Siam','Oli','Anik'];
+    var arrNames = ['Taiyob', 'Siam', 'Oli', 'Anik'];
     return Scaffold(
         appBar: AppBar(
           //title: Text(widget.title),
           title: Text('Flutter Container'),
         ),
-        body: ListView.separated(itemBuilder: (context, index){
-              //ListView.builder(itemBuilder: (context, index){
-          //return Text(arrNames[index], style: TextStyle(fontSize: 21, fontWeight: FontWeight.w900),);
-          return SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Row(
-              children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Column(
-                  children: [
-                    Text(arrNames[index], style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(arrNames[index], style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),),
+        body: ListView.separated(
+          itemBuilder: (context, index) {
+            //ListView.builder(itemBuilder: (context, index){
+            //return Text(arrNames[index], style: TextStyle(fontSize: 21, fontWeight: FontWeight.w900),);
+            return SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      children: [
+                        Text(
+                          arrNames[index],
+                          style: TextStyle(
+                              fontSize: 21, fontWeight: FontWeight.w500),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(
+                            arrNames[index],
+                            style: TextStyle(
+                                fontSize: 21, fontWeight: FontWeight.w500),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(
+                            arrNames[index],
+                            style: TextStyle(
+                                fontSize: 21, fontWeight: FontWeight.w500),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(
+                            arrNames[index],
+                            style: TextStyle(
+                                fontSize: 21, fontWeight: FontWeight.w500),
+                          ),
+                        ),
+                      ],
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(arrNames[index], style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      arrNames[index],
+                      style:
+                          TextStyle(fontSize: 21, fontWeight: FontWeight.w500),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(arrNames[index], style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      arrNames[index],
+                      style:
+                          TextStyle(fontSize: 21, fontWeight: FontWeight.w500),
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(arrNames[index], style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(arrNames[index], style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),),
-              ),
-              ],
-            ),
-          );
-        },
-        itemCount: arrNames.length,
-        //itemExtent: 100,
+            );
+          },
+          itemCount: arrNames.length,
+          //itemExtent: 100,
           //scrollDirection: Axis.horizontal,
-          separatorBuilder: (context, index){
-              return Divider(height: 100, thickness: 1,);
+          separatorBuilder: (context, index) {
+            return Divider(
+              height: 100,
+              thickness: 1,
+            );
           },
         )
-
-
 
         // ListView(
         //   scrollDirection: Axis.horizontal,
@@ -115,6 +141,6 @@ class _MyHomePageState extends State<MyHomePage> {
         //     )
         //   ],
         // )
-    );
+        );
   }
 }
