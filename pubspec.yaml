@@ -37,6 +37,9 @@ dependencies:
   cupertino_icons: ^1.0.2
   font_awesome_flutter: ^10.5.0
   curved_navigation_bar: ^1.0.3
+  badges: ^3.1.2
+  animated_text_kit: ^4.2.2
+  pin_code_fields: ^8.0.1
   #shared_preferences:
   shared_preferences: ^2.2.0
 

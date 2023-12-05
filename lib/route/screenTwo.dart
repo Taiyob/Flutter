@@ -1,3 +1,4 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_basics/route/screenOne.dart';
 import 'package:flutter_basics/route/screenThree.dart';
@@ -35,6 +36,16 @@ class _ScreenTwoState extends State<ScreenTwo> {
                   'go-screen-three',
                   style: TextStyle(fontFamily: 'Pacifico'),
                 )),
+            SizedBox(height: 10,),
+            AnimatedTextKit(
+                animatedTexts: [
+                  FadeAnimatedText(
+                    'Upcomming animation',
+                  ),
+                  RotateAnimatedText('This is rorate',textStyle: TextStyle(fontSize: 50)),
+                ],
+              totalRepeatCount: 4,
+            ),
           ],
         ),
       ),

@@ -32,6 +32,11 @@ class _HomeScreenState extends State<HomeScreen> {
               ],
             ),
             actions: [
+              Padding(
+                padding: const EdgeInsets.only(top: 18.0),
+                child: Badge(child: Icon(Icons.shopping_bag_outlined)),
+              ),
+              SizedBox(width: 10,),
               Icon(Icons.search),
               SizedBox(
                 width: 10,

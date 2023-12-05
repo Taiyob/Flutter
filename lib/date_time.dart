@@ -36,19 +36,21 @@ class TimeandDateUserState extends State<TimeandDateUser>{
           child: Container(
             height: 200,
             width: 200,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                //Text('Current Time: ${time.hour}:${time.minute}:${time.second}', style: TextStyle(fontSize: 25),),
-                Text('Current Time: ${DateFormat('Hms').format(time)}', style: TextStyle(fontSize: 25),),
-                //Text('Current Time: ${DateFormat('QQQQ').format(time)}', style: TextStyle(fontSize: 25),),
-                Text('Current Time: ${DateFormat('yMMMMEEEEd').format(time)}', style: TextStyle(fontSize: 25),),
-                ElevatedButton(onPressed: (){
-                  setState(() {
+            child: SingleChildScrollView(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  //Text('Current Time: ${time.hour}:${time.minute}:${time.second}', style: TextStyle(fontSize: 25),),
+                  Text('Current Time: ${DateFormat('Hms').format(time)}', style: TextStyle(fontSize: 25),),
+                  //Text('Current Time: ${DateFormat('QQQQ').format(time)}', style: TextStyle(fontSize: 25),),
+                  Text('Current Time: ${DateFormat('yMMMMEEEEd').format(time)}', style: TextStyle(fontSize: 25),),
+                  ElevatedButton(onPressed: (){
+                    setState(() {
 
-                  });
-                }, child: Text('Current Time'))
-              ],
+                    });
+                  }, child: Text('Current Time'))
+                ],
+              ),
             ),
           ),
         )),

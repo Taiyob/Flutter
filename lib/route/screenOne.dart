@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_basics/route/screenTwo.dart';
+import 'package:pin_code_fields/pin_code_fields.dart';
 
 class ScreenOne extends StatefulWidget {
   static const String id = 'screen_one';
@@ -66,20 +67,47 @@ class _ScreenOneState extends State<ScreenOne> {
         ),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            TextButton(
-              onPressed: () {
-                //Navigator.pop(context);
-                Navigator.pushNamed(context, ScreenTwo.id);
-              },
-              child: const Text(
-                'go-screen-two',
-                style: TextStyle(fontFamily: 'Pacifico'),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 30),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              TextButton(
+                onPressed: () {
+                  //Navigator.pop(context);
+                  Navigator.pushNamed(context, ScreenTwo.id);
+                },
+                child: const Text(
+                  'go-screen-two',
+                  style: TextStyle(fontFamily: 'Pacifico'),
+                ),
               ),
-            ),
-          ],
+              SizedBox(height: 10,),
+               PinCodeTextField(
+                 appContext: context,
+                 length: 6,
+                 keyboardType: TextInputType.number,
+                 cursorColor: Colors.teal,
+                 obscureText: true,
+                 enabled: true,
+                 obscuringCharacter: '*',
+                 pinTheme:  PinTheme(
+                   shape: PinCodeFieldShape.box,
+                   borderRadius: BorderRadius.circular(10),
+                   fieldHeight: 50,
+                   fieldWidth: 40,
+                   activeFillColor: Colors.teal,
+                   inactiveFillColor: Colors.grey,
+                   selectedFillColor: Colors.red,
+                   inactiveColor: Colors.orange,
+                   selectedColor: Colors.grey,
+                 ),
+                 onChanged: (value){
+
+                 },
+               ),
+            ],
+          ),
         ),
       ),
     );
