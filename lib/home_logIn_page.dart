@@ -19,235 +19,237 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.all(16),
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            InkWell(
-              onTap: () {
-                //Get.to( ProductScreen(fromCategory : false) );
-              },
-              child: Column(
-                children: <Widget>[
-                  Container(
-                      alignment: Alignment.center,
-                      width: width,
-                      height: height,
-                      decoration: const BoxDecoration(
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.all(16),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              InkWell(
+                onTap: () {
+                  //Get.to( ProductScreen(fromCategory : false) );
+                },
+                child: Column(
+                  children: <Widget>[
+                    Container(
+                        alignment: Alignment.center,
+                        width: width,
+                        height: height,
+                        decoration: const BoxDecoration(
 
-                          borderRadius: BorderRadius.all(Radius.circular(14)),
-                          color: Colors.white),
-                      child:
+                            borderRadius: BorderRadius.all(Radius.circular(14)),
+                            color: Colors.white),
+                        child:
+                          SizedBox(
+                          width: 25,
+                          height: 25,
+                          child: Image.asset(
+                            "assets/images/category.png",
+                            fit: BoxFit.cover,
+                          ),
+                        )
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(4.0),
+                      child: Text(
+                        "Popular",
+                        style: TextStyle(
+                            color: const Color(0xFF1E1E1E),
+                            fontFamily: 'Roboto-Light.ttf',
+                            fontSize: customFontSize),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              InkWell(
+                onTap: () {
+                  //Get.to( ProductScreen(fromCategory : false) );
+                },
+                child: Column(
+                  children: <Widget>[
+                    Container(
+                        alignment: Alignment.center,
+                        width: width,
+                        height: height,
+                        decoration: const BoxDecoration(
+
+                            borderRadius: BorderRadius.all(Radius.circular(14)),
+                            color: Colors.white),
+                        child:
                         SizedBox(
-                        width: 25,
-                        height: 25,
-                        child: Image.asset(
-                          "assets/images/category.png",
-                          fit: BoxFit.cover,
-                        ),
-                      )
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(4.0),
-                    child: Text(
-                      "Popular",
-                      style: TextStyle(
-                          color: const Color(0xFF1E1E1E),
-                          fontFamily: 'Roboto-Light.ttf',
-                          fontSize: customFontSize),
+                          width: 25,
+                          height: 25,
+                          child: Image.asset(
+                            "assets/images/category.png",
+                            fit: BoxFit.cover,
+                          ),
+                        )
                     ),
-                  )
-                ],
+                    Padding(
+                      padding: const EdgeInsets.all(4.0),
+                      child: Text(
+                        "Popular",
+                        style: TextStyle(
+                            color: const Color(0xFF1E1E1E),
+                            fontFamily: 'Roboto-Light.ttf',
+                            fontSize: customFontSize),
+                      ),
+                    )
+                  ],
+                ),
               ),
-            ),
-            InkWell(
-              onTap: () {
-                //Get.to( ProductScreen(fromCategory : false) );
-              },
-              child: Column(
-                children: <Widget>[
-                  Container(
-                      alignment: Alignment.center,
-                      width: width,
-                      height: height,
-                      decoration: const BoxDecoration(
+              InkWell(
+                onTap: () {
+                  //Get.to(ProductScreen(fromCategory : false));
+                },
+                child: Column(
+                  children: <Widget>[
+                    Container(
+                        alignment: Alignment.center,
+                        width: width,
+                        height: height,
+                        decoration: const BoxDecoration(
 
-                          borderRadius: BorderRadius.all(Radius.circular(14)),
-                          color: Colors.white),
-                      child:
-                      SizedBox(
-                        width: 25,
-                        height: 25,
-                        child: Image.asset(
-                          "assets/images/category.png",
-                          fit: BoxFit.cover,
-                        ),
-                      )
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(4.0),
-                    child: Text(
-                      "Popular",
-                      style: TextStyle(
-                          color: const Color(0xFF1E1E1E),
-                          fontFamily: 'Roboto-Light.ttf',
-                          fontSize: customFontSize),
+                            borderRadius: BorderRadius.all(Radius.circular(14)),
+                            color: Colors.white),
+                        child:
+                        SizedBox(
+                          width: 25,
+                          height: 25,
+                          child: Image.asset(
+                            "assets/images/category.png",
+                            fit: BoxFit.cover,
+                          ),
+                        )
                     ),
-                  )
-                ],
+                    Padding(
+                      padding: const EdgeInsets.all(4.0),
+                      child: Text(
+                        "Popular",
+                        style: TextStyle(
+                            color: const Color(0xFF1E1E1E),
+                            fontFamily: 'Roboto-Light.ttf',
+                            fontSize: customFontSize),
+                      ),
+                    )
+                  ],
+                ),
               ),
-            ),
-            InkWell(
-              onTap: () {
-                //Get.to(ProductScreen(fromCategory : false));
-              },
-              child: Column(
-                children: <Widget>[
-                  Container(
-                      alignment: Alignment.center,
-                      width: width,
-                      height: height,
-                      decoration: const BoxDecoration(
+              InkWell(
+                onTap: () {
+                  //Get.to(ProductScreen(fromCategory : false));
+                },
+                child: Column(
+                  children: <Widget>[
+                    Container(
+                        alignment: Alignment.center,
+                        width: width,
+                        height: height,
+                        decoration: const BoxDecoration(
 
-                          borderRadius: BorderRadius.all(Radius.circular(14)),
-                          color: Colors.white),
-                      child:
-                      SizedBox(
-                        width: 25,
-                        height: 25,
-                        child: Image.asset(
-                          "assets/images/category.png",
-                          fit: BoxFit.cover,
-                        ),
-                      )
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(4.0),
-                    child: Text(
-                      "Popular",
-                      style: TextStyle(
-                          color: const Color(0xFF1E1E1E),
-                          fontFamily: 'Roboto-Light.ttf',
-                          fontSize: customFontSize),
+                            borderRadius: BorderRadius.all(Radius.circular(14)),
+                            color: Colors.white),
+                        child:
+                        SizedBox(
+                          width: 25,
+                          height: 25,
+                          child: Image.asset(
+                            "assets/images/category.png",
+                            fit: BoxFit.cover,
+                          ),
+                        )
                     ),
-                  )
-                ],
+                    Padding(
+                      padding: const EdgeInsets.all(4.0),
+                      child: Text(
+                        "Popular",
+                        style: TextStyle(
+                            color: const Color(0xFF1E1E1E),
+                            fontFamily: 'Roboto-Light.ttf',
+                            fontSize: customFontSize),
+                      ),
+                    )
+                  ],
+                ),
               ),
-            ),
-            InkWell(
-              onTap: () {
-                //Get.to(ProductScreen(fromCategory : false));
-              },
-              child: Column(
-                children: <Widget>[
-                  Container(
-                      alignment: Alignment.center,
-                      width: width,
-                      height: height,
-                      decoration: const BoxDecoration(
+              InkWell(
+                onTap: () {
+                  //Get.to(ProductScreen(fromCategory : false));
+                },
+                child: Column(
+                  children: <Widget>[
+                    Container(
+                        alignment: Alignment.center,
+                        width: width,
+                        height: height,
+                        decoration: const BoxDecoration(
 
-                          borderRadius: BorderRadius.all(Radius.circular(14)),
-                          color: Colors.white),
-                      child:
-                      SizedBox(
-                        width: 25,
-                        height: 25,
-                        child: Image.asset(
-                          "assets/images/category.png",
-                          fit: BoxFit.cover,
-                        ),
-                      )
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(4.0),
-                    child: Text(
-                      "Popular",
-                      style: TextStyle(
-                          color: const Color(0xFF1E1E1E),
-                          fontFamily: 'Roboto-Light.ttf',
-                          fontSize: customFontSize),
+                            borderRadius: BorderRadius.all(Radius.circular(14)),
+                            color: Colors.white),
+                        child:
+                        SizedBox(
+                          width: 25,
+                          height: 25,
+                          child: Image.asset(
+                            "assets/images/category.png",
+                            fit: BoxFit.cover,
+                          ),
+                        )
                     ),
-                  )
-                ],
+                    Padding(
+                      padding: const EdgeInsets.all(4.0),
+                      child: Text(
+                        "Popular",
+                        style: TextStyle(
+                            color: const Color(0xFF1E1E1E),
+                            fontFamily: 'Roboto-Light.ttf',
+                            fontSize: customFontSize),
+                      ),
+                    )
+                  ],
+                ),
               ),
-            ),
-            InkWell(
-              onTap: () {
-                //Get.to(ProductScreen(fromCategory : false));
-              },
-              child: Column(
-                children: <Widget>[
-                  Container(
-                      alignment: Alignment.center,
-                      width: width,
-                      height: height,
-                      decoration: const BoxDecoration(
+              InkWell(
+                onTap: () {
+                  //Get.to(ProductScreen(fromCategory : false));
+                },
+                child: Column(
+                  children: <Widget>[
+                    Container(
+                        alignment: Alignment.center,
+                        width: width,
+                        height: height,
+                        decoration: const BoxDecoration(
 
-                          borderRadius: BorderRadius.all(Radius.circular(14)),
-                          color: Colors.white),
-                      child:
-                      SizedBox(
-                        width: 25,
-                        height: 25,
-                        child: Image.asset(
-                          "assets/images/category.png",
-                          fit: BoxFit.cover,
-                        ),
-                      )
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(4.0),
-                    child: Text(
-                      "Popular",
-                      style: TextStyle(
-                          color: const Color(0xFF1E1E1E),
-                          fontFamily: 'Roboto-Light.ttf',
-                          fontSize: customFontSize),
+                            borderRadius: BorderRadius.all(Radius.circular(14)),
+                            color: Colors.white),
+                        child:
+                        SizedBox(
+                          width: 25,
+                          height: 25,
+                          child: Image.asset(
+                            "assets/images/category.png",
+                            fit: BoxFit.cover,
+                          ),
+                        )
                     ),
-                  )
-                ],
+                    Padding(
+                      padding: const EdgeInsets.all(4.0),
+                      child: Text(
+                        "Popular",
+                        style: TextStyle(
+                            color: const Color(0xFF1E1E1E),
+                            fontFamily: 'Roboto-Light.ttf',
+                            fontSize: customFontSize),
+                      ),
+                    )
+                  ],
+                ),
               ),
-            ),
-            InkWell(
-              onTap: () {
-                //Get.to(ProductScreen(fromCategory : false));
-              },
-              child: Column(
-                children: <Widget>[
-                  Container(
-                      alignment: Alignment.center,
-                      width: width,
-                      height: height,
-                      decoration: const BoxDecoration(
-
-                          borderRadius: BorderRadius.all(Radius.circular(14)),
-                          color: Colors.white),
-                      child:
-                      SizedBox(
-                        width: 25,
-                        height: 25,
-                        child: Image.asset(
-                          "assets/images/category.png",
-                          fit: BoxFit.cover,
-                        ),
-                      )
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(4.0),
-                    child: Text(
-                      "Popular",
-                      style: TextStyle(
-                          color: const Color(0xFF1E1E1E),
-                          fontFamily: 'Roboto-Light.ttf',
-                          fontSize: customFontSize),
-                    ),
-                  )
-                ],
-              ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

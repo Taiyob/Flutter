@@ -1,7 +1,6 @@
 import 'dart:async';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_basics/home_logIn_page.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main(){
