@@ -84,13 +84,18 @@ class _LoginScreenState extends State<LoginScreen> {
                 sp.setString('email', emailController.text.toString());
                 sp.setString('age', ageController.text.toString());
                 sp.setBool('isLogin', true);
-                Navigator.push(context, MaterialPageRoute(builder: (context)=>InnerHome()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => InnerHome()));
               },
               child: Container(
                 height: 50,
                 width: double.infinity,
                 color: Colors.green,
-                child: Center(child: Text('Login',style: TextStyle(fontSize: 20, color: Colors.white),)),
+                child: Center(
+                    child: Text(
+                  'Login',
+                  style: TextStyle(fontSize: 20, color: Colors.white),
+                )),
               ),
             ),
           ],
