@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 void main(){
   runApp(CustomButton());
 }
+
 class CustomButton extends StatelessWidget {
   const CustomButton({Key? key}) : super(key: key);
 

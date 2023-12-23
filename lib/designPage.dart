@@ -2,6 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_basics/travelinfo.dart';
 import 'package:flutter_basics/widgets/most_popular.dart';
 
+
+void main(){
+  runApp(MaterialApp(home: DesignPage(),));
+}
+
 class DesignPage extends StatefulWidget {
   const DesignPage({Key? key}) : super(key: key);
 
