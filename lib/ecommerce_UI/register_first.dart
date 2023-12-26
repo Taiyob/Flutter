@@ -38,48 +38,40 @@ class _RegisterScreenState extends State<RegisterScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Column(
+        body: ListView(
+          padding: EdgeInsets.symmetric(horizontal: 16),
           children: [
             Container(
               margin: EdgeInsets.only(left: 190, top: 40),
               child: ButtonForSplash(),
             ),
-            const SizedBox(
-              height: 50,
-            ),
-            Image.asset('assets/images/nagadred.png'),
-            const SizedBox(
-              height: 20,
-            ),
-            Text(
-              'Welcome',
-              style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 28,
-                  fontWeight: FontWeight.w700),
+            Image.asset('assets/images/nagadred.png',height: 200,),
+            Center(
+              child: Text(
+                'Welcome',
+                style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 28,
+                    fontWeight: FontWeight.w700),
+              ),
             ),
             SizedBox(height: 80,),
             TextFormField(
               decoration: InputDecoration(
                 hintText: 'Mobile Number',
                 prefixIcon: Icon(Icons.phone),
-                border: InputBorder.none,
-                enabledBorder: UnderlineInputBorder(
+                border: UnderlineInputBorder(
                   borderSide: BorderSide(
-                    color: Colors.black
-                  )
+                    color: Colors.black, // Customize the color as needed
+                    width: 2.0, // Customize the width as needed
+                  ),
                 ),
-                // border: OutlineInputBorder(
-                //   borderSide: BorderSide(
-                //     color: Colors.black,
-                //     width: 2,
-                //   ),
-                // ),
-                // focusedBorder: OutlineInputBorder(
-                //   borderSide: BorderSide(
-                //     color: Colors.black,
-                //   ),
-                // ),
+                focusedBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Colors.red, // Customize the color as needed
+                    width: 2.0, // Customize the width as needed
+                  ),
+                ),
               ),
             ),
           ],
