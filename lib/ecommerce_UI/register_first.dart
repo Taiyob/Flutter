@@ -74,6 +74,15 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 ),
               ),
             ),
+            SizedBox(height: 20,),
+            ElevatedButton(onPressed: (){}, child: Text('NEXT'),style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.white, // Background color
+              foregroundColor: Colors.grey,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(50.0), // Border radius
+              ),// Text color
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+            ),),
           ],
         ),
       ),
