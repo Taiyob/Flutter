@@ -45,7 +45,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
               margin: EdgeInsets.only(left: 190, top: 40),
               child: ButtonForSplash(),
             ),
-            Image.asset('assets/images/nagadred.png',height: 200,),
+            Image.asset(
+              'assets/images/nagadred.png',
+              height: 200,
+            ),
             Center(
               child: Text(
                 'Welcome',
@@ -55,14 +58,16 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     fontWeight: FontWeight.w700),
               ),
             ),
-            SizedBox(height: 80,),
+            SizedBox(
+              height: 40,
+            ),
             TextFormField(
               decoration: InputDecoration(
                 hintText: 'Mobile Number',
                 prefixIcon: Icon(Icons.phone),
                 border: UnderlineInputBorder(
                   borderSide: BorderSide(
-                    color: Colors.black, // Customize the color as needed
+                    color: Colors.redAccent, // Customize the color as needed
                     width: 2.0, // Customize the width as needed
                   ),
                 ),
@@ -74,16 +79,80 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 ),
               ),
             ),
-            SizedBox(height: 20,),
-            ElevatedButton(onPressed: (){}, child: Text('NEXT'),style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.white, // Background color
-              foregroundColor: Colors.grey,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(50.0), // Border radius
-              ),// Text color
-              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-            ),),
+            SizedBox(
+              height: 25,
+            ),
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: 24),
+              child: ElevatedButton(
+                onPressed: () {},
+                child: Text('NEXT'),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.white, // Background color
+                  foregroundColor: Colors.grey,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(50.0), // Border radius
+                    side: BorderSide(color: Colors.red, width: 3.0),
+                  ), // Text color
+                  padding: EdgeInsets.symmetric(horizontal: 0, vertical: 12),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 25,
+            ),
+            Center(
+                child: Text(
+              'Not register yet?',
+              style: TextStyle(color: Colors.grey, fontSize: 12),
+            )),
+            SizedBox(
+              height: 6,
+            ),
+            Center(
+                child: Text(
+              'Register Now',
+              style: TextStyle(
+                  color: Colors.red, fontWeight: FontWeight.bold, fontSize: 24),
+            )),
           ],
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+          items: [
+            BottomNavigationBarItem(
+              icon: Column(
+                children: [
+                  Image.asset('assets/images/location.png'),
+                  SizedBox(height: 8.0), // Adjust the height as needed
+                ],
+              ),
+              label: 'Store Location',
+            ),
+            BottomNavigationBarItem(
+              icon: Column(
+                children: [
+                  Image.asset('assets/images/offers.png'),
+                  SizedBox(height: 8.0), // Adjust the height as needed
+                ],
+              ),
+              label: 'Store Location',
+            ),
+            BottomNavigationBarItem(
+              icon: Column(
+                children: [
+                  Image.asset('assets/images/help.png'),
+                  SizedBox(height: 8.0), // Adjust the height as needed
+                ],
+              ),
+              label: 'Store Location',
+            ),
+            // BottomNavigationBarItem(
+            //     icon: Image.asset('assets/images/offers.png'), label: 'Offers'),
+            // BottomNavigationBarItem(
+            //     icon: Image.asset('assets/images/help.png'), label: 'Help'),
+          ],
+          unselectedItemColor: Colors.grey,
+          selectedItemColor: Colors.grey,
         ),
       ),
     );
