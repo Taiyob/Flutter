@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_basics/ecommerce_UI/Nagad_Home.dart';
+import 'package:flutter_basics/ecommerce_UI/register_first.dart';
 
 void main(){
   runApp(MainUi());
@@ -21,7 +22,12 @@ class _MainUiState extends State<MainUi> {
       theme: ThemeData(
         primarySwatch: Colors.orange,
       ),
-      home: HomeNagad(),
+      initialRoute: HomeNagad.id,
+      routes: {
+        HomeNagad.id: (context)=> HomeNagad(),
+        RegisterScreenOne.id: (context)=> RegisterScreenOne(),
+      },
+      //home: HomeNagad(),
     );
   }
 }

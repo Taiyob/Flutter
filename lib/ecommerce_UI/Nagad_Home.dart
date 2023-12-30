@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class HomeNagad extends StatefulWidget {
+  static const String id = 'home_nagad';
   const HomeNagad({Key? key}) : super(key: key);
 
   @override
