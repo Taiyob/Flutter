@@ -27,7 +27,7 @@ class _HomeNagadState extends State<HomeNagad> {
                       Color(0xFFF13C33),
                     ],
                     stops: [0.0, 1.0],
-                    tileMode: TileMode.clamp,
+                    tileMode: TileMode.clamp,       // 
                   ),
                 ),
                 child: Column(
