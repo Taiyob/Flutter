@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_basics/ecommerce_UI/additional_info.dart';
 
 class ScanData extends StatefulWidget {
   static const String id = 'scan_data';
@@ -224,6 +225,26 @@ class _ScanDataState extends State<ScanData> {
                   ],
                 ),
               ],
+            ),
+          ),
+        ],
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: [
+          BottomNavigationBarItem(
+            label: 'Back',
+            icon: Container(),
+          ),
+          BottomNavigationBarItem(
+            label: '2/8',
+            icon: Container(),
+          ),
+          BottomNavigationBarItem(
+            label: '',
+            icon: ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, AdditionalInfo.id);
+              },child: Text('Next'),
             ),
           ),
         ],
