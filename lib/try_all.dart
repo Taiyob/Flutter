@@ -5,7 +5,7 @@ void main() {
 }
 
 class TryAll extends StatefulWidget {
-  static const String id = 'additional_info';
+  //static const String id = 'additional_info';
 
   const TryAll({Key? key}) : super(key: key);
 
@@ -47,7 +47,7 @@ class _TryAllState extends State<TryAll> {
                   ),
                   _CustomRadio(
                     label: 'Female',
-                    value: 'Female',
+                    value: 'Female', 
                     groupValue: selectValue,
                     onChanged: (value) {
                       setState(() {

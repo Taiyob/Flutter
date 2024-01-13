@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 void main() {
   runApp(MaterialApp(home: AdditionalInfo()));
 }
@@ -21,59 +22,97 @@ class _AdditionalInfoState extends State<AdditionalInfo> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Additional Info'),
+        // toggleButtonsTheme: ToggleButtonsThemeData(
+        //   color: Colors.orange, // Set your desired color
+        //   selectedColor: Colors.red, // Set your desired selected color
+        // ),
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 18),
-            child: Text('Gender'),
-          ),
-          SizedBox(
-            width: double.infinity,
-            child: Row(
-              children: [
-                Expanded(
-                  child: RadioListTile<String>(
-                    title: Text('Male',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold,),),
-                    value: 'male',
-                    groupValue: selectValue,
-                    onChanged: (value) {
-                      setState(() {
-                        selectValue = value;
-                      });
-                    },
-                  ),
-                ),
-                Expanded(
-                  child: RadioListTile<String>(
-                    title: Text('Female',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
-                    value: 'female',
-                    groupValue: selectValue,
-                    onChanged: (value) {
-                      setState(() {
-                        selectValue = value;
-                      });
-                    },
-                  ),
-                ),
-                Expanded(
-                  child: RadioListTile<String>(
-                    title: Text('Others',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
-                    value: 'others',
-                    groupValue: selectValue,
-                    onChanged: (value) {
-                      setState(() {
-                        selectValue = value;
-                      });
-                    },
-                  ),
-                ),
-              ],
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 18,vertical: 8),
+              child: Text('Gender',style: TextStyle(color: Colors.grey),),
             ),
-          ),
-        ],
+            SizedBox(
+              width: double.infinity,
+              child: Row(
+                children: [
+                  _CustomRadio(
+                    label: 'Male',
+                    value: 'Male',
+                    groupValue: selectValue,
+                    onChanged: (value) {
+                      setState(() {
+                        selectValue = value;
+                      });
+                    },
+                  ),
+                  _CustomRadio(
+                    label: 'Female',
+                    value: 'Female',
+                    groupValue: selectValue,
+                    onChanged: (value) {
+                      setState(() {
+                        selectValue = value;
+                      });
+                    },
+                  ),
+                  _CustomRadio(
+                    label: 'Others',
+                    value: 'Others',
+                    groupValue: selectValue,
+                    onChanged: (value) {
+                      setState(() {
+                        selectValue = value;
+                      });
+                    },
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
+    );
+  }
+}
+
+class _CustomRadio<T> extends StatelessWidget {
+  final String label;
+  final T value;
+  final T? groupValue;
+  final ValueChanged<T?>? onChanged;
+
+  const _CustomRadio({
+    required this.label,
+    required this.value,
+    required this.groupValue,
+    required this.onChanged,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Radio<T>(
+          value: value,
+          groupValue: groupValue,
+          onChanged: onChanged,
+        ),
+        GestureDetector(
+          onTap: () {
+            onChanged?.call(value);
+          },
+          child: Text(
+            label,
+            style: TextStyle(fontSize: 16), // You can adjust the font size
+          ),
+        ),
+      ],
     );
   }
 }
