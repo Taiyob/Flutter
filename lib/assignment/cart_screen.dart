@@ -32,6 +32,8 @@ class _CartScreenState extends State<CartScreen> {
     }
   ];
   int count = 1;
+  // var unitPrice = cartItems[index]['price'];
+  // int allProductPrice = (unitPrice * count).toInt();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
