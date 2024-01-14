@@ -16,6 +16,7 @@ class _ShoppingCartState extends State<ShoppingCart> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Shopping Cart',
       theme: ThemeData(
         primarySwatch: Colors.blue
