@@ -8,23 +8,23 @@ class CartScreen extends StatefulWidget {
 }
 
 class _CartScreenState extends State<CartScreen> {
-  List<Map<String, Object>> cartItems = [
+  List cartItems = [
     {
-      "image": "https://ibb.co/M5gPRXb",
+      "image": "assets/images/cart1.png",
       "productName": "Pullover",
       "productColor": "Black",
       "productSize": "L",
       "price": 51
     },
     {
-      "image": "https://ibb.co/M5gPRXb",
+      "image": "assets/images/cart2.png",
       "productName": "T-Shirt",
       "productColor": "Gray",
       "productSize": "L",
       "price": 30
     },
     {
-      "image": "https://ibb.co/M5gPRXb",
+      "image": "assets/images/cart3.png",
       "productName": "Sport Dress",
       "productColor": "Black",
       "productSize": "M",
@@ -73,7 +73,7 @@ class _CartScreenState extends State<CartScreen> {
                   int count = quantities[index] ?? 1;
                   return Padding(
                     padding:
-                        const EdgeInsets.only(top: 18, right: 18, left: 18),
+                    const EdgeInsets.only(top: 18, right: 18, left: 18),
                     child: Card(
                       child: Padding(
                         padding: const EdgeInsets.only(bottom: 18),
@@ -82,7 +82,7 @@ class _CartScreenState extends State<CartScreen> {
                             Row(
                               children: [
                                 Image.asset(
-                                  'assets/images/cart1.png',
+                                  cartItems[index]["image"],
                                   fit: BoxFit.fitHeight,
                                 ),
                                 Padding(
@@ -90,17 +90,17 @@ class _CartScreenState extends State<CartScreen> {
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     crossAxisAlignment:
-                                        CrossAxisAlignment.start,
+                                    CrossAxisAlignment.start,
                                     children: [
                                       Container(
                                         width: 220,
                                         child: Row(
                                           mainAxisAlignment:
-                                              MainAxisAlignment.spaceBetween,
+                                          MainAxisAlignment.spaceBetween,
                                           children: [
                                             Text(
                                               cartItems[index]["productName"]
-                                                  as String,
+                                              as String,
                                               style: TextStyle(
                                                   color: Colors.black,
                                                   fontSize: 16,
@@ -124,7 +124,7 @@ class _CartScreenState extends State<CartScreen> {
                                           ),
                                           Text(
                                             cartItems[index]["productColor"]
-                                                as String,
+                                            as String,
                                             style: TextStyle(
                                                 fontWeight: FontWeight.bold),
                                           ),
@@ -142,7 +142,7 @@ class _CartScreenState extends State<CartScreen> {
                                           ),
                                           Text(
                                               cartItems[index]["productSize"]
-                                                  as String,
+                                              as String,
                                               style: TextStyle(
                                                   fontWeight: FontWeight.bold)),
                                         ],
@@ -171,8 +171,8 @@ class _CartScreenState extends State<CartScreen> {
                                             elevation: 4.0,
                                             heroTag: null,
                                             materialTapTargetSize:
-                                                MaterialTapTargetSize
-                                                    .shrinkWrap,
+                                            MaterialTapTargetSize
+                                                .shrinkWrap,
                                           ),
                                           SizedBox(
                                             width: 10,
@@ -187,14 +187,14 @@ class _CartScreenState extends State<CartScreen> {
                                               updateQuantity(index, count);
                                               if(count == 5){
                                                 showDialog(context: context, builder: (context){
-                                                   return AlertDialog(
-                                                     title: Text(cartItems[index]["productName"]
-                                                     as String,),
-                                                     content: Text('You select five items already and Total Amount ${totalAmount}'),
-                                                     actions: [
-                                                       ElevatedButton(onPressed: (){}, child: Text('Close')),
-                                                     ],
-                                                   );
+                                                  return AlertDialog(
+                                                    title: Text(cartItems[index]["productName"]
+                                                    as String,),
+                                                    content: Text('You select five items already and Total Amount ${totalAmount}'),
+                                                    actions: [
+                                                      ElevatedButton(onPressed: (){}, child: Text('Close')),
+                                                    ],
+                                                  );
                                                 });
                                               }
                                             },
@@ -210,8 +210,8 @@ class _CartScreenState extends State<CartScreen> {
                                             elevation: 4.0,
                                             heroTag: null,
                                             materialTapTargetSize:
-                                                MaterialTapTargetSize
-                                                    .shrinkWrap,
+                                            MaterialTapTargetSize
+                                                .shrinkWrap,
                                           ),
                                           SizedBox(
                                             width: 80,
@@ -268,7 +268,7 @@ class _CartScreenState extends State<CartScreen> {
                         backgroundColor: Colors.red, // Background color
                         shape: RoundedRectangleBorder(
                           borderRadius:
-                              BorderRadius.circular(25), // Border radius
+                          BorderRadius.circular(25), // Border radius
                         ),
                       ),
                       child: Text(
