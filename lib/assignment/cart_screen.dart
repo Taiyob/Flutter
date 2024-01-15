@@ -31,11 +31,11 @@ class _CartScreenState extends State<CartScreen> {
       "price": 43
     }
   ];
-  int count = 1;
-  // var unitPrice = cartItems[index]['price'];
-  // int allProductPrice = (unitPrice * count).toInt();
+  //int count = 1;
+  Map<int, int> quantities = {};
   @override
   Widget build(BuildContext context) {
+    int totalAmount = calculateTotalAmount();
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0xFFF9F9F9),
@@ -64,12 +64,13 @@ class _CartScreenState extends State<CartScreen> {
                     color: Colors.black,
                     fontSize: 30,
                     fontWeight: FontWeight.bold),
-              ), 
+              ),
             ),
             Expanded(
               child: ListView.builder(
                 itemCount: cartItems.length,
                 itemBuilder: (context, index) {
+                  int count = quantities[index] ?? 1;
                   return Padding(
                     padding:
                         const EdgeInsets.only(top: 18, right: 18, left: 18),
@@ -153,10 +154,10 @@ class _CartScreenState extends State<CartScreen> {
                                         children: [
                                           FloatingActionButton(
                                             onPressed: () {
-                                              count--;
-                                              setState(() {
-                                                
-                                              });
+                                              if (count > 1) {
+                                                count--;
+                                                updateQuantity(index, count);
+                                              }
                                             },
                                             child: Text(
                                               '-',
@@ -168,8 +169,7 @@ class _CartScreenState extends State<CartScreen> {
                                             mini: true,
                                             shape: CircleBorder(),
                                             elevation: 4.0,
-                                            heroTag:
-                                                null,
+                                            heroTag: null,
                                             materialTapTargetSize:
                                                 MaterialTapTargetSize
                                                     .shrinkWrap,
@@ -184,9 +184,19 @@ class _CartScreenState extends State<CartScreen> {
                                           FloatingActionButton(
                                             onPressed: () {
                                               count++;
-                                              setState(() {
-                                                
-                                              });
+                                              updateQuantity(index, count);
+                                              if(count == 5){
+                                                showDialog(context: context, builder: (context){
+                                                   return AlertDialog(
+                                                     title: Text(cartItems[index]["productName"]
+                                                     as String,),
+                                                     content: Text('You select five items already and Total Amount ${totalAmount}'),
+                                                     actions: [
+                                                       ElevatedButton(onPressed: (){}, child: Text('Close')),
+                                                     ],
+                                                   );
+                                                });
+                                              }
                                             },
                                             child: Text(
                                               '+',
@@ -198,8 +208,7 @@ class _CartScreenState extends State<CartScreen> {
                                             mini: true,
                                             shape: CircleBorder(),
                                             elevation: 4.0,
-                                            heroTag:
-                                                null,
+                                            heroTag: null,
                                             materialTapTargetSize:
                                                 MaterialTapTargetSize
                                                     .shrinkWrap,
@@ -208,7 +217,7 @@ class _CartScreenState extends State<CartScreen> {
                                             width: 80,
                                           ),
                                           Text(
-                                            '\$${cartItems[index]["price"]}',
+                                            '\$${((cartItems as List)[index]["price"] * count)}',
                                             style: TextStyle(
                                                 fontSize: 16,
                                                 fontWeight: FontWeight.bold),
@@ -237,7 +246,7 @@ class _CartScreenState extends State<CartScreen> {
                     'Total Amount',
                     style: TextStyle(color: Colors.grey, fontSize: 18),
                   ),
-                  Text('124\$',
+                  Text('\$$totalAmount',
                       style: TextStyle(
                           color: Colors.black,
                           fontSize: 22,
@@ -252,7 +261,9 @@ class _CartScreenState extends State<CartScreen> {
                   width: 350,
                   height: 50,
                   child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        mySnakbar(context, 'Thank you for your checkout and your total amount is ${totalAmount}');
+                      },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.red, // Background color
                         shape: RoundedRectangleBorder(
@@ -271,5 +282,23 @@ class _CartScreenState extends State<CartScreen> {
         ),
       ),
     );
+  }
+
+  void updateQuantity(int index, int newQuantity) {
+    setState(() {
+      quantities[index] = newQuantity;
+    });
+  }
+
+  int calculateTotalAmount() {
+    int total = 0;
+    for (int i = 0; i < cartItems.length; i++) {
+      int count = quantities[i] ?? 1;
+      total += (cartItems[i]["price"] as int) * count;
+    }
+    return total;
+  }
+  mySnakbar(context,msg){
+    return ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(msg)));
   }
 }
