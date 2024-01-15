@@ -73,11 +73,11 @@ class _CartScreenState extends State<CartScreen> {
                   int count = quantities[index] ?? 1;
                   return Padding(
                     padding:
-                    const EdgeInsets.only(top: 18, right: 18, left: 18),
+                    const EdgeInsets.only(top: 18, right: 18, left: 18,),
                     child: Card(
                       child: Padding(
-                        padding: const EdgeInsets.only(bottom: 18),
-                        child: Column(
+                        padding: const EdgeInsets.only(bottom: 0),
+                        child: Row(
                           children: [
                             Row(
                               children: [
@@ -106,8 +106,11 @@ class _CartScreenState extends State<CartScreen> {
                                                   fontSize: 16,
                                                   fontWeight: FontWeight.bold),
                                             ),
-                                            Image.asset(
-                                                'assets/images/icon.png'),
+                                            Column(
+                                              children: [
+                                                Icon(Icons.more_vert),
+                                              ],
+                                            ),
                                           ],
                                         ),
                                       ),
@@ -148,7 +151,7 @@ class _CartScreenState extends State<CartScreen> {
                                         ],
                                       ),
                                       SizedBox(
-                                        height: 18,
+                                        height: 8,
                                       ),
                                       Row(
                                         children: [
