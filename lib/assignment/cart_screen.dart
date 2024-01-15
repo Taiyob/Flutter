@@ -31,17 +31,16 @@ class _CartScreenState extends State<CartScreen> {
       "price": 43
     }
   ];
-  //int count = 1;
   Map<int, int> quantities = {};
   @override
   Widget build(BuildContext context) {
     int totalAmount = calculateTotalAmount();
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xFFF9F9F9),
-        actions: [
+        backgroundColor: const Color(0xFFF9F9F9),
+        actions: const [
           Padding(
-            padding: const EdgeInsets.only(right: 10),
+            padding: EdgeInsets.only(right: 10),
             child: Icon(
               Icons.search,
               size: 24,
@@ -51,13 +50,13 @@ class _CartScreenState extends State<CartScreen> {
         ],
       ),
       body: Container(
-        color: Color(0xFFF9F9F9),
+        color: const Color(0xFFF9F9F9),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
+            const Padding(
+              padding: EdgeInsets.all(8.0),
               child: Text(
                 'My Bag',
                 style: TextStyle(
@@ -101,12 +100,12 @@ class _CartScreenState extends State<CartScreen> {
                                             Text(
                                               cartItems[index]["productName"]
                                               as String,
-                                              style: TextStyle(
+                                              style: const TextStyle(
                                                   color: Colors.black,
                                                   fontSize: 16,
                                                   fontWeight: FontWeight.bold),
                                             ),
-                                            Column(
+                                            const Column(
                                               children: [
                                                 Icon(Icons.more_vert),
                                               ],
@@ -116,41 +115,41 @@ class _CartScreenState extends State<CartScreen> {
                                       ),
                                       Row(
                                         children: [
-                                          Text(
+                                          const Text(
                                             'Color:',
                                             style: TextStyle(
                                               color: Color(0xFF9B9B9B),
                                             ),
                                           ),
-                                          SizedBox(
+                                          const SizedBox(
                                             width: 5,
                                           ),
                                           Text(
                                             cartItems[index]["productColor"]
                                             as String,
-                                            style: TextStyle(
+                                            style: const TextStyle(
                                                 fontWeight: FontWeight.bold),
                                           ),
-                                          SizedBox(
+                                          const SizedBox(
                                             width: 18,
                                           ),
-                                          Text(
+                                          const Text(
                                             'Size:',
                                             style: TextStyle(
                                               color: Color(0xFF9B9B9B),
                                             ),
                                           ),
-                                          SizedBox(
+                                          const SizedBox(
                                             width: 5,
                                           ),
                                           Text(
                                               cartItems[index]["productSize"]
                                               as String,
-                                              style: TextStyle(
+                                              style: const TextStyle(
                                                   fontWeight: FontWeight.bold)),
                                         ],
                                       ),
-                                      SizedBox(
+                                      const SizedBox(
                                         height: 8,
                                       ),
                                       Row(
@@ -162,12 +161,6 @@ class _CartScreenState extends State<CartScreen> {
                                                 updateQuantity(index, count);
                                               }
                                             },
-                                            child: Text(
-                                              '-',
-                                              style: TextStyle(
-                                                  color: Colors.grey,
-                                                  fontSize: 32),
-                                            ),
                                             backgroundColor: Colors.white,
                                             mini: true,
                                             shape: CircleBorder(),
@@ -176,12 +169,18 @@ class _CartScreenState extends State<CartScreen> {
                                             materialTapTargetSize:
                                             MaterialTapTargetSize
                                                 .shrinkWrap,
+                                            child: const Text(
+                                              '-',
+                                              style: TextStyle(
+                                                  color: Colors.grey,
+                                                  fontSize: 32),
+                                            ),
                                           ),
-                                          SizedBox(
+                                          const SizedBox(
                                             width: 10,
                                           ),
                                           Text(count.toString()),
-                                          SizedBox(
+                                          const SizedBox(
                                             width: 10,
                                           ),
                                           FloatingActionButton(
@@ -201,12 +200,6 @@ class _CartScreenState extends State<CartScreen> {
                                                 });
                                               }
                                             },
-                                            child: Text(
-                                              '+',
-                                              style: TextStyle(
-                                                  color: Colors.grey,
-                                                  fontSize: 32),
-                                            ),
                                             backgroundColor: Colors.white,
                                             mini: true,
                                             shape: CircleBorder(),
@@ -215,13 +208,19 @@ class _CartScreenState extends State<CartScreen> {
                                             materialTapTargetSize:
                                             MaterialTapTargetSize
                                                 .shrinkWrap,
+                                            child: const Text(
+                                              '+',
+                                              style: TextStyle(
+                                                  color: Colors.grey,
+                                                  fontSize: 32),
+                                            ),
                                           ),
-                                          SizedBox(
+                                          const SizedBox(
                                             width: 80,
                                           ),
                                           Text(
                                             '\$${((cartItems as List)[index]["price"] * count)}',
-                                            style: TextStyle(
+                                            style: const TextStyle(
                                                 fontSize: 16,
                                                 fontWeight: FontWeight.bold),
                                           ),
@@ -245,12 +244,12 @@ class _CartScreenState extends State<CartScreen> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
+                  const Text(
                     'Total Amount',
                     style: TextStyle(color: Colors.grey, fontSize: 18),
                   ),
                   Text('\$$totalAmount',
-                      style: TextStyle(
+                      style: const TextStyle(
                           color: Colors.black,
                           fontSize: 22,
                           fontWeight: FontWeight.bold)),
@@ -274,7 +273,7 @@ class _CartScreenState extends State<CartScreen> {
                           BorderRadius.circular(25), // Border radius
                         ),
                       ),
-                      child: Text(
+                      child: const Text(
                         'CHECK OUT',
                         style: TextStyle(color: Colors.white, fontSize: 18),
                       )),
