@@ -85,7 +85,7 @@ class _CartScreenState extends State<CartScreen> {
                                   fit: BoxFit.fitHeight,
                                 ),
                                 Padding(
-                                  padding: EdgeInsets.only(left: 8),
+                                  padding: const EdgeInsets.only(left: 8),
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     crossAxisAlignment:
@@ -163,7 +163,7 @@ class _CartScreenState extends State<CartScreen> {
                                             },
                                             backgroundColor: Colors.white,
                                             mini: true,
-                                            shape: CircleBorder(),
+                                            shape: const CircleBorder(),
                                             elevation: 4.0,
                                             heroTag: null,
                                             materialTapTargetSize:
@@ -192,9 +192,9 @@ class _CartScreenState extends State<CartScreen> {
                                                   return AlertDialog(
                                                     title: Text(cartItems[index]["productName"]
                                                     as String,),
-                                                    content: Text('You select five items already and Total Amount ${totalAmount}'),
+                                                    content: Text('You select five items already and Total Amount $totalAmount'),
                                                     actions: [
-                                                      ElevatedButton(onPressed: (){}, child: Text('Close')),
+                                                      ElevatedButton(onPressed: (){}, child: const Text('Close')),
                                                     ],
                                                   );
                                                 });
@@ -202,7 +202,7 @@ class _CartScreenState extends State<CartScreen> {
                                             },
                                             backgroundColor: Colors.white,
                                             mini: true,
-                                            shape: CircleBorder(),
+                                            shape: const CircleBorder(),
                                             elevation: 4.0,
                                             heroTag: null,
                                             materialTapTargetSize:
@@ -219,7 +219,7 @@ class _CartScreenState extends State<CartScreen> {
                                             width: 80,
                                           ),
                                           Text(
-                                            '\$${((cartItems as List)[index]["price"] * count)}',
+                                            '\$${((cartItems)[index]["price"] * count)}',
                                             style: const TextStyle(
                                                 fontSize: 16,
                                                 fontWeight: FontWeight.bold),
@@ -264,7 +264,7 @@ class _CartScreenState extends State<CartScreen> {
                   height: 50,
                   child: ElevatedButton(
                       onPressed: () {
-                        mySnakbar(context, 'Thank you for your checkout and your total amount is ${totalAmount}');
+                        mySnakbar(context, 'Thank you for your checkout and your total amount is $totalAmount');
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.red, // Background color
