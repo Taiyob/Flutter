@@ -16,7 +16,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.grey,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 30),
@@ -33,15 +33,15 @@ class _HomeScreenState extends State<HomeScreen> {
                         alignment: Alignment.bottomRight,
                         child: Text(
                           userInput.toString(),
-                          style: TextStyle(fontSize: 30, color: Colors.white),
+                          style: const TextStyle(fontSize: 30, color: Colors.white,backgroundColor: Colors.blueGrey),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 13,
                       ),
                       Text(
                         answer.toString(),
-                        style: TextStyle(fontSize: 30, color: Colors.white),
+                        style: const TextStyle(fontSize: 30, color: Colors.white),
                       ),
                     ],
                   ),
@@ -50,176 +50,183 @@ class _HomeScreenState extends State<HomeScreen> {
               Expanded(
                 flex: 2,
                 child: SingleChildScrollView(
-                  child: Column(
-                    children: [
-                      Row(
-                        children: [
-                          ButtonWidget(
-                            title: 'AC',
-                            onPress: () {
-                              userInput = '';
-                              answer = '';
-                              setState(() {});
-                            },
-                          ),
-                          ButtonWidget(
-                            title: '+/-',
-                            onPress: () {
-                              userInput = userInput + '+/-';
-                              setState(() {});
-                            },
-                          ),
-                          ButtonWidget(
-                            title: '%',
-                            onPress: () {
-                              userInput = userInput + '%';
-                              setState(() {});
-                            },
-                          ),
-                          ButtonWidget(
-                            title: '/',
-                            color: Color(0xffffa00a),
-                            onPress: () {
-                              userInput = userInput + '/';
-                              setState(() {});
-                            },
-                          ),
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          ButtonWidget(
-                            title: '7',
-                            onPress: () {
-                              userInput = userInput + '7';
-                              setState(() {});
-                            },
-                          ),
-                          ButtonWidget(
-                            title: '8',
-                            onPress: () {
-                              userInput = userInput + '8';
-                              setState(() {});
-                            },
-                          ),
-                          ButtonWidget(
-                            title: '0',
-                            onPress: () {
-                              userInput = userInput + '0';
-                              setState(() {});
-                            },
-                          ),
-                          ButtonWidget(
-                            title: 'X',
-                            color: Color(0xffffa00a),
-                            onPress: () {
-                              userInput = userInput + 'X';
-                              setState(() {});
-                            },
-                          ),
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          ButtonWidget(
-                            title: '4',
-                            onPress: () {
-                              userInput = userInput + '4';
-                              setState(() {});
-                            },
-                          ),
-                          ButtonWidget(
-                            title: '5',
-                            onPress: () {
-                              userInput = userInput + '5';
-                              setState(() {});
-                            },
-                          ),
-                          ButtonWidget(
-                            title: '6',
-                            onPress: () {
-                              userInput = userInput + '6';
-                              setState(() {});
-                            },
-                          ),
-                          ButtonWidget(
-                            title: '-',
-                            color: Color(0xffffa00a),
-                            onPress: () {
-                              userInput = userInput + '-';
-                              setState(() {});
-                            },
-                          ),
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          ButtonWidget(
-                            title: '1',
-                            onPress: () {
-                              userInput = userInput + '1';
-                              setState(() {});
-                            },
-                          ),
-                          ButtonWidget(
-                            title: '2',
-                            onPress: () {
-                              userInput = userInput + '2';
-                              setState(() {});
-                            },
-                          ),
-                          ButtonWidget(
-                            title: '3',
-                            onPress: () {
-                              userInput = userInput + '3';
-                              setState(() {});
-                            },
-                          ),
-                          ButtonWidget(
-                            title: '+',
-                            color: Color(0xffffa00a),
-                            onPress: () {
-                              userInput = userInput + '+';
-                              setState(() {});
-                            },
-                          ),
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          ButtonWidget(
-                            title: '0',
-                            onPress: () {
-                              userInput = userInput + '0';
-                              setState(() {});
-                            },
-                          ),
-                          ButtonWidget(
-                            title: '.',
-                            onPress: () {
-                              userInput = userInput + '.';
-                              setState(() {});
-                            },
-                          ),
-                          ButtonWidget(
-                            title: 'DEL',
-                            onPress: () {
-                              userInput =
-                                  userInput.substring(0, userInput.length - 1);
-                              setState(() {});
-                            },
-                          ),
-                          ButtonWidget(
-                            title: '=',
-                            color: Color(0xffffa00a),
-                            onPress: () {
-                              equalPress();
-                              setState(() {});
-                            },
-                          ),
-                        ],
-                      ),
-                    ],
+                  child: Container(
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                     color: Colors.black,
+                     borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Column(
+                      children: [
+                        Row(
+                          children: [
+                            ButtonWidget(
+                              title: 'AC',
+                              onPress: () {
+                                userInput = '';
+                                answer = '';
+                                setState(() {});
+                              },
+                            ),
+                            ButtonWidget(
+                              title: '+/-',
+                              onPress: () {
+                                userInput = '$userInput+/-';
+                                setState(() {});
+                              },
+                            ),
+                            ButtonWidget(
+                              title: '%',
+                              onPress: () {
+                                userInput = '$userInput%';
+                                setState(() {});
+                              },
+                            ),
+                            ButtonWidget(
+                              title: '/',
+                              color: const Color(0xffffa00a),
+                              onPress: () {
+                                userInput = '$userInput/';
+                                setState(() {});
+                              },
+                            ),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            ButtonWidget(
+                              title: '7',
+                              onPress: () {
+                                userInput = '${userInput}7';
+                                setState(() {});
+                              },
+                            ),
+                            ButtonWidget(
+                              title: '8',
+                              onPress: () {
+                                userInput = '${userInput}8';
+                                setState(() {});
+                              },
+                            ),
+                            ButtonWidget(
+                              title: '0',
+                              onPress: () {
+                                userInput = '${userInput}0';
+                                setState(() {});
+                              },
+                            ),
+                            ButtonWidget(
+                              title: 'X',
+                              color: const Color(0xffffa00a),
+                              onPress: () {
+                                userInput = '${userInput}X';
+                                setState(() {});
+                              },
+                            ),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            ButtonWidget(
+                              title: '4',
+                              onPress: () {
+                                userInput = '${userInput}4';
+                                setState(() {});
+                              },
+                            ),
+                            ButtonWidget(
+                              title: '5',
+                              onPress: () {
+                                userInput = '${userInput}5';
+                                setState(() {});
+                              },
+                            ),
+                            ButtonWidget(
+                              title: '6',
+                              onPress: () {
+                                userInput = '${userInput}6';
+                                setState(() {});
+                              },
+                            ),
+                            ButtonWidget(
+                              title: '-',
+                              color: const Color(0xffffa00a),
+                              onPress: () {
+                                userInput = '$userInput-';
+                                setState(() {});
+                              },
+                            ),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            ButtonWidget(
+                              title: '1',
+                              onPress: () {
+                                userInput = '${userInput}1';
+                                setState(() {});
+                              },
+                            ),
+                            ButtonWidget(
+                              title: '2',
+                              onPress: () {
+                                userInput = '${userInput}2';
+                                setState(() {});
+                              },
+                            ),
+                            ButtonWidget(
+                              title: '3',
+                              onPress: () {
+                                userInput = '${userInput}3';
+                                setState(() {});
+                              },
+                            ),
+                            ButtonWidget(
+                              title: '+',
+                              color: const Color(0xffffa00a),
+                              onPress: () {
+                                userInput = '$userInput+';
+                                setState(() {});
+                              },
+                            ),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            ButtonWidget(
+                              title: '0',
+                              onPress: () {
+                                userInput = '${userInput}0';
+                                setState(() {});
+                              },
+                            ),
+                            ButtonWidget(
+                              title: '.',
+                              onPress: () {
+                                userInput = '$userInput.';
+                                setState(() {});
+                              },
+                            ),
+                            ButtonWidget(
+                              title: 'DEL',
+                              onPress: () {
+                                userInput =
+                                    userInput.substring(0, userInput.length - 1);
+                                setState(() {});
+                              },
+                            ),
+                            ButtonWidget(
+                              title: '=',
+                              color: const Color(0xffffa00a),
+                              onPress: () {
+                                equalPress();
+                                setState(() {});
+                              },
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),

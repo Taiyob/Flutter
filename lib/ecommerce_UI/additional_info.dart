@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 
 void main() {
-  runApp(MaterialApp(home: AdditionalInfo()));
+  runApp(const MaterialApp(home: AdditionalInfo()));
 }
 
 class AdditionalInfo extends StatefulWidget {
@@ -21,7 +21,7 @@ class _AdditionalInfoState extends State<AdditionalInfo> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Additional Info'),
+        title: const Text('Additional Info'),
         // toggleButtonsTheme: ToggleButtonsThemeData(
         //   color: Colors.orange, // Set your desired color
         //   selectedColor: Colors.red, // Set your desired selected color
@@ -32,8 +32,8 @@ class _AdditionalInfoState extends State<AdditionalInfo> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 18,vertical: 8),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 18,vertical: 8),
               child: Text('Gender',style: TextStyle(color: Colors.grey),),
             ),
             SizedBox(
@@ -79,7 +79,7 @@ class _AdditionalInfoState extends State<AdditionalInfo> {
     );
   }
 }
-
+     
 class _CustomRadio<T> extends StatelessWidget {
   final String label;
   final T value;
@@ -109,7 +109,7 @@ class _CustomRadio<T> extends StatelessWidget {
           },
           child: Text(
             label,
-            style: TextStyle(fontSize: 16), // You can adjust the font size
+            style: const TextStyle(fontSize: 16), 
           ),
         ),
       ],

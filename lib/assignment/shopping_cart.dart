@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_basics/assignment/cart_screen.dart';
 
 main(){
-  runApp(ShoppingCart());
+  runApp(const ShoppingCart());
 }
 
 class ShoppingCart extends StatefulWidget {
@@ -21,7 +21,7 @@ class _ShoppingCartState extends State<ShoppingCart> {
       theme: ThemeData(
         primarySwatch: Colors.blue
       ),
-      home: CartScreen(),
+      home: const CartScreen(),
     );
   }
 }
